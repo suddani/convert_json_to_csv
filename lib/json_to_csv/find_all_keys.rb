@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Extract all keys from a stream of json objects
 module JsonToCsv
   def self.find_all_keys(input, output)
     all_keys = []
