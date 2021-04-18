@@ -1,10 +1,31 @@
 # JsonToCsv
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/json_to_csv`. To experiment with that code, run `bin/console` for an interactive prompt.
+This programm is ment as a small shel programm that converts json stream files to csv files. 
 
-TODO: Delete this and the text above, and describe your gem
-
+It works with the standard input if no input file is given.
 ## Installation
+
+```
+gem install json_to_csv
+```
+
+## Usage
+
+```
+Usage: convert_to_csv [options] FILE
+        --[no-]stdout                Print to stdout as well
+    -o, --output=OUTPUT              Output file or print to std out
+        --[no-]header                Output header line
+    -k, --keys=KEYS                  Keys to use for csv. Comma seperated
+        --key-file FILE              File containing keys one per line
+        --only-keys                  Only print keys
+        --filter-file FILE           File containing filter
+    -f, --filter FILTER              Filter by key,value0,value1,value2
+    -l, --limit LIMIT                Limit output to LIMIT entries(equal or greater than 0)
+    -h, --help                       Prints this help
+```
+
+## Installation as dependency
 
 Add this line to your application's Gemfile:
 
@@ -19,11 +40,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install json_to_csv
-
-## Usage
-
-TODO: Write usage instructions here
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
