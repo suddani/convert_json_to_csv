@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Converting json stream to csv stream
-module JsonToCsv
+module ConvertJsonToCsv
   def self.enity_to_array(entity, keys)
     keys.map do |key|
       if key.end_with?('_at')

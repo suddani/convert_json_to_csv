@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module JsonToCsv
+module ConvertJsonToCsv
   # The parser used in the executeable to load terminal arguments
   class Parser
     attr_accessor :file, :keys, :only_keys, :filter, :limit, :header, :std
@@ -113,9 +113,9 @@ module JsonToCsv
       options = parser.parse ARGV
 
       if options&.only_keys
-        JsonToCsv.find_all_keys(ARGF, options.output)
+        ConvertJsonToCsv.find_all_keys(ARGF, options.output)
       elsif options
-        JsonToCsv.convert_to_csv(
+        ConvertJsonToCsv.convert_to_csv(
           ARGF, options.output,
           keys: options.keys,
           filter: options.filter,

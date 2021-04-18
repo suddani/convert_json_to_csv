@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module JsonToCsv
+module ConvertJsonToCsv
   # Wraps multiple output streams and fans out the puts command
   class MultiWrapper
     def initialize(*outputs)

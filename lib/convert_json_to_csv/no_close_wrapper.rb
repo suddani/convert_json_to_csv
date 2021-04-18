@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module JsonToCsv
+module ConvertJsonToCsv
   # Wraps an output streams and prevents the user from closing it
   class NoCloseWrapper
     def initialize(io)

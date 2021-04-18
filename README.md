@@ -1,4 +1,4 @@
-# JsonToCsv
+# ConvertJsonToCsv
 
 This programm is ment as a small shel programm that converts json stream files to csv files. 
 
@@ -6,7 +6,7 @@ It works with the standard input if no input file is given.
 ## Installation
 
 ```
-gem install json_to_csv
+gem install convert_json_to_csv
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Usage: convert_to_csv [options] FILE
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'json_to_csv'
+gem 'convert_json_to_csv'
 ```
 
 And then execute:
@@ -39,7 +39,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install json_to_csv
+    $ gem install convert_json_to_csv
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -48,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/json_to_csv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/json_to_csv/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/convert_json_to_csv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/convert_json_to_csv/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -56,4 +56,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the JsonToCsv project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/json_to_csv/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the ConvertJsonToCsv project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/convert_json_to_csv/blob/master/CODE_OF_CONDUCT.md).

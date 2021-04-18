@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe JsonToCsv::LimitWrapper do
+RSpec.describe ConvertJsonToCsv::LimitWrapper do
   let(:io) { double }
   let(:limit) { 0 }
   let(:header) { false }

@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in json_to_csv.gemspec
+# Specify your gem's dependencies in convert_json_to_csv.gemspec
 gemspec
 
 gem 'rake', '~> 13.0'

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe JsonToCsv do
+RSpec.describe ConvertJsonToCsv do
   let(:data) { [] }
 
   let(:input) { HashArrayReader.new(data) }

@@ -2,6 +2,6 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'json_to_csv'
+require 'convert_json_to_csv'
 
-JsonToCsv::Parser.run
+ConvertJsonToCsv::Parser.run

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'json_to_csv'
+require 'convert_json_to_csv'
 
 class HashArrayReader
   def initialize(data)

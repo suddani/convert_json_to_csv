@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe JsonToCsv::NoCloseWrapper do
+RSpec.describe ConvertJsonToCsv::NoCloseWrapper do
   let(:io) { double }
   subject { described_class.new(io) }
 

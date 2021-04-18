@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module JsonToCsv
+module ConvertJsonToCsv
   # Wraps an output stream and only allows limited number of puts
   class LimitWrapper
     def initialize(io, limit, header)
