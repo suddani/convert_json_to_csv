@@ -11,9 +11,11 @@ module JsonToCsv
 
     def puts(data)
       return should_exit! if @count >= @limit
+
       out = @io.puts data
       @count += 1
       return should_exit! if @count >= @limit
+
       out
     end
 

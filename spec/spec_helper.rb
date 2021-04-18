@@ -27,8 +27,7 @@ class DirectReader
 end
 
 class Printer
-  def puts(data)
-  end
+  def puts(data); end
 end
 
 RSpec.configure do |config|
