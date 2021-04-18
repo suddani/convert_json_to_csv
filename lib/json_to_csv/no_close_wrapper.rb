@@ -2,7 +2,7 @@
 
 module JsonToCsv
   # Wraps an output streams and prevents the user from closing it
-  class StdoutWrapper
+  class NoCloseWrapper
     def initialize(io)
       @io = io
     end

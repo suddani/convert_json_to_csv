@@ -1,20 +1,28 @@
 # frozen_string_literal: true
 
 module JsonToCsv
-  # Wraps multiple output streams and fans out the puts command
-  class MultiWrapper
-    def initialize(*outputs)
-      @outputs = outputs
+  # Wraps an output stream and only allows limited number of puts
+  class LimitWrapper
+    def initialize(io, limit, header)
+      @io = io
+      @limit = limit + (header ? 1 : 0)
+      @count = 0
     end
 
     def puts(data)
-      @outputs.each do |output|
-        output.puts data
-      end
+      return should_exit! if @count >= @limit
+      out = @io.puts data
+      @count += 1
+      return should_exit! if @count >= @limit
+      out
     end
 
     def close
-      @outputs.each(&:close)
+      @io.close
+    end
+
+    def should_exit!
+      exit
     end
   end
 end

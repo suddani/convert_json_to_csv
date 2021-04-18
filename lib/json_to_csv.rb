@@ -9,7 +9,7 @@ require_relative 'json_to_csv/convert_to_csv'
 require_relative 'json_to_csv/find_all_keys'
 require_relative 'json_to_csv/limit_wrapper'
 require_relative 'json_to_csv/multi_wrapper'
-require_relative 'json_to_csv/stdout_wrapper'
+require_relative 'json_to_csv/no_close_wrapper'
 require_relative 'json_to_csv/parser'
 
 # Wraps all json to csv related classes and functions

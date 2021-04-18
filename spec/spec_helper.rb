@@ -2,6 +2,35 @@
 
 require 'json_to_csv'
 
+class HashArrayReader
+  def initialize(data)
+    @data = data
+  end
+
+  def each_line(&block)
+    @data.each do |entry|
+      block.call(entry.to_json)
+    end
+  end
+end
+
+class DirectReader
+  def initialize(data)
+    @data = data
+  end
+
+  def each_line(&block)
+    @data.each do |entry|
+      block.call(entry)
+    end
+  end
+end
+
+class Printer
+  def puts(data)
+  end
+end
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'

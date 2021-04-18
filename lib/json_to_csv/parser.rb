@@ -17,7 +17,7 @@ module JsonToCsv
 
     def file_output
       @file_output ||= if std && file
-                         MultiWrapper.new(StdoutWrapper.new($stdout), file)
+                         MultiWrapper.new(NoCloseWrapper.new($stdout), file)
                        else
                          file
                        end
@@ -25,9 +25,9 @@ module JsonToCsv
 
     def output
       @output ||= if limit
-                    LimitWrapper.new(file_output || StdoutWrapper.new($stdout), limit, header)
+                    LimitWrapper.new(file_output || NoCloseWrapper.new($stdout), limit, header)
                   else
-                    file_output || StdoutWrapper.new($stdout)
+                    file_output || NoCloseWrapper.new($stdout)
                   end
     end
 
@@ -119,7 +119,7 @@ module JsonToCsv
           ARGF, options.output,
           keys: options.keys,
           filter: options.filter,
-          header: options.heade
+          header: options.header
         )
       end
     ensure
